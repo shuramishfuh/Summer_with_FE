@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Summer.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("index", "Students", FormMethod.Post))
+{
+    <div class="input-group input-group-btn">
+        <div class="form-actions no-color" id="form">
+           
+                  
+            @Html.TextBox("SearchString", null,new { @class = "form-control" , @placeholder = " Name" })
+            <input  type="submit" value="Filter" class="btn  btn-primary btn-toolbar "  />
+        </div>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdvanceLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdinaryLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.School)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FutureCareerChoice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearOfAttendance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+          @{
+              if (item.AdvanceLevel == null)
+              {
+                  @Html.ActionLink("Add ALevels","Create","AdvanceLevels",new{ id=item.StudentId},null)
+              }
+              else
+              {
+                  @Html.ActionLink("See ALevels","Details","AdvanceLevels",new{ id=item.StudentId},null)
+              }
+
+          }
+           
+        </td>
+        <td>
+            @{
+                if (item.OrdinaryLevel == null)
+                {
+                    @Html.ActionLink("Add OLevels","Create","OrdinaryLevels",new{ id=item.StudentId},null)
+                }
+                else
+                {
+                    @Html.ActionLink("See OLevels","Details","OrdinaryLevels",new{ id=item.StudentId},null)
+                }
+
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.School)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FutureCareerChoice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearOfAttendance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentId })
+        </td>
+    </tr>
+}
+
+</table>

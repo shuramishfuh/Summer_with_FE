@@ -1,0 +1,66 @@
+﻿@model Summer.Models.AdvanceLevel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AdvanceLevel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject_3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject_3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject_4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject_4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject_5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject_5)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index","Students")
+</p>

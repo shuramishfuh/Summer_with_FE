@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tasks</h2>
+<hr/>
+<div class="row">
+    <div class="col-md-3 col-sm-3">
+        <div class="well">
+            <h3>Students </h3>
+            Manage students. Create, update, delete and more
+            <hr />
+            @Html.ActionLink("Manage Students", "Index", "Students", null, new { @class = "btn btn-info btn-sm  " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+        <div class="well">
+            <h3>Courses </h3>
+            Manage Courses. Create, update, delete and more
+            <hr />
+            @Html.ActionLink("Manage Courses", "Index", "Courses", null, new { @class = "btn btn-info btn-sm " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+        <div class="well">
+            <h3>Authenticate Users </h3>
+            Enable users sign up
+            <hr />
+            @Html.ActionLink("Give Access", "Index", "Codes", null, new { @class = "btn btn-info btn-sm " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+        <div class="well">
+            <h3>Events </h3>
+            Manage Events. Create, update, delete and more
+            <hr />
+            @Html.ActionLink("Manage Events", "Index", "Events", null, new { @class = "btn btn-info btn-sm " })
+        </div>
+    </div>
+    
+    </div>
+    <div class="row">
+
+    <div class="col-md-3 col-sm-3">
+        <div class="well">
+            <h3>Testscore </h3>
+            Manage Testscore. Create, update, delete and more
+            <hr />
+            @Html.ActionLink("Manage TestScore", "Index", "TestScores", null, new { @class = "btn btn-info btn-sm " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+        <div class="well">
+            <h3>Manage Weeks </h3>
+            CRUD on weeks
+            <hr />
+            @Html.ActionLink("Manage Weeks", "Index", "WeekNumbers", null, new { @class = "btn btn-info btn-sm " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+        <div class="well">
+            <h3>Manage Attendance </h3>
+            CRUD on Attendance
+            <hr />
+            @Html.ActionLink("Manage Attendance", "Index", "Attendances", null, new { @class = "btn btn-info btn-sm  " })
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+        <div class="well">
+            <h3>Manage User </h3>
+            Manage Users
+            <hr />
+            @Html.ActionLink("Manage Attendance", "ListUsers", "Account", null, new { @class = "btn btn-info btn-sm  " })
+        </div>
+    </div>
+</div>
+<hr/>

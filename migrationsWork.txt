@@ -1,0 +1,5 @@
+// add migration with full qualifier
+add-migration "Seed_users" -ConfigurationTypeName Summer.Migrations.Identity.Configuration
+
+//update-database 
+ update-database -ConfigurationTypeName Summer.Migrations.Identity.Configuration
